@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RSVP</title>
+  <style>
+    html, body {
+    height: 100%; /* Ensure the body and html elements take up full height */
+    margin: 0; /* Remove default margin */
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+}
+
+body {
+    background-image: url('/Users/rae/Desktop/bdayweb/assets/heather-green-Kpj1c6eoPJA-unsplash.jpg');
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent tiling */
+    background-attachment: fixed; /* Keep the background image fixed during scrolling */
+    font-family: Arial, sans-serif; /* Set a default font */
+    text-align: center; /* Center text inside the body */
+}
+
+header {
+    margin-bottom: 20px; /* Space between header and form */
+}
+
+h1 {
+    font-family: 'Arial', sans-serif; /* Apply the custom font to h1 */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+h2 {
+    font-family: 'Arial', sans-serif; /* Apply the custom font to h2 */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+form {
+    display: flex; /* Use Flexbox for form layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+input[type="text"] {
+    margin-bottom: 10px; /* Space between input and button */
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(234, 25, 116); /* Button color */
+    border: none;
+    border-radius: 5px; /* Optional: Add rounded corners */
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(200, 0, 100); /* Button hover color */
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>join the crisis</h1>
+      <form id="registrar">
+        <input type="text" name="name" placeholder="i'm in">
+        <button type="submit" name="submit" value="submit">Submit</button>
+      </form>
+    </header>
+
+    <div class="main">
+      <h2>the chosen</h2>
+      <ul id="invitedList"></ul>
+    </div>
+  </div>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+</html>

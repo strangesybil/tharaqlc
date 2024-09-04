@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lorem Ipsum</title>
+    
+    <style>
+         @font-face {
+            font-family: 'Pixel';
+            src: url('/Users/rae/Downloads/LLPIXEL3.ttf') format('truetype'); /* Ensure path and format are correct */
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'neon';
+            src: url('/Users/rae/Desktop/bdayweb/NEON____.TTF') format('truetype'); /* Ensure path and format are correct */
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: none; /* Removes the underline */
+            color: rgb(0, 0, 0); /* Black color for links */
+            transition: color 0.3s ease; /* Smooth color transition */
+        }
+        a:hover {
+            color: rgb(234, 25, 116); /* Change color on hover */
+        }
+        a:visited {
+            color: rgb(0, 0, 0); /* Color for visited links */
+        }
+        a:active {
+            color: rgb(0, 0, 0); /* Color for active links */
+        }   
+        
+        body {
+            background-image: url('/Users/rae/Desktop/bdayweb/assets/heather-green-Kpj1c6eoPJA-unsplash.jpg');
+            background-size: cover; /* Ensure the image covers the entire background */
+            background-repeat: no-repeat; /* Prevent tiling */
+            background-attachment: fixed; /* Keep the background image fixed during scrolling */
+            font-family: Arial, sans-serif; /* Set a default font */
+            text-align: center; /* Center text inside the body */
+            margin: 0;
+            padding: 0;
+        }
+
+        #demo {
+            font-family: 'Pixel', sans-serif; /* Ensure Pixel font is used */
+            font-size: 100px; /* Font size for the countdown */
+            color: #d8195f; /* Base color */
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif; /* Apply the custom Pixel font to h1 */
+            font-size:55px;
+        }
+
+        h2 {
+            font-family: 'Arial', sans-serif;
+            font-size: 35px; /* Increase the size for better readability */
+            margin-top: 40px;
+            color: #d8195f; /* Matching color theme */
+        }
+
+        /* Grid container styles */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); /* Three columns */
+            gap: 5px; /* Reduced space between grid items */
+            max-width: 500px; /* Optional: Limit the grid width */
+            margin: 20px auto; /* Center the grid and add some space around it */
+            padding: 10px; /* Optional: Add some padding */
+        }
+
+        .grid-item {
+            position: relative; /* Position relative to contain the overlay */
+            overflow: hidden; /* Hide overflow to maintain aspect ratio */
+        }
+
+        .grid-item img {
+            display: block;
+            width: 100%;
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .grid-item .overlay {
+            position: absolute; /* Position absolutely within the relative container */
+            top: 0;
+            left: 0;
+            width: 100%; /* Match the width of the image */
+            height: 100%; /* Match the height of the image */
+            background-size: cover; /* Ensures the overlay background covers the entire span while maintaining aspect ratio */
+            background-repeat: no-repeat;
+            background-position: center; /* Center the overlay background */
+            opacity: 0; /* Start with the overlay being invisible */
+            transition: opacity 0.3s ease; /* Smooth transition for the overlay */
+        }
+
+        .grid-item:hover .overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+
+        /* Specific overlays for individual grid items */
+        .grid-item:nth-child(1) .overlay {
+            background-image: url('/Users/rae/Desktop/bdayweb/assets/7.jpeg'); /* Unique overlay image for the first grid item */
+        }
+        .grid-item:nth-child(2) .overlay {
+            background-image: url('/Users/rae/Desktop/bdayweb/assets/8.jpeg'); /* Unique overlay image for the second grid item */
+        }
+        .grid-item:nth-child(3) .overlay {
+            background-image: url('/Users/rae/Desktop/bdayweb/assets/9.jpeg'); /* Unique overlay image for the third grid item */
+        }
+        .grid-item:nth-child(4) .overlay {
+            background-image: url('/Users/rae/Desktop/bdayweb/assets/10.jpeg'); /* Unique overlay image for the fourth grid item */
+        }
+        .grid-item:nth-child(5) .overlay {
+            background-image: url('/Users/rae/Desktop/bdayweb/assets/11.jpeg'); /* Unique overlay image for the fifth grid item */
+        }
+        .grid-item:nth-child(6) .overlay {
+            background-image: url('/Users/rae/Desktop/bdayweb/assets/12.jpeg'); /* Unique overlay image for the sixth grid item */
+        }
+    </style>
+</head>
+<body>
+    <p id="demo" style="font-size: 30px;"></p>
+
+    <script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Sept 14, 2024 00:00:00").getTime();
+
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+
+      // Get today's date and time
+      var now = new Date().getTime();
+        
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+        
+      // Time calculations for days, hours, minutes, and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        
+      // Output the result in an element with id="demo"
+      document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+      + minutes + "m " + seconds + "s ";
+        
+      // If the count down is over, write some text 
+      if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "Happy Birthday Thara!";
+      }
+    }, 1000);
+    </script>
+
+    <h1><a href="rsvp.html">rsvp here</a></h1>
+    <h2>mood board</h2>
+    <p>vibe check for lost souls</p>
+    
+    
+    <!-- Image Grid Section -->
+    <div class="grid-container">
+      <div class="grid-item">
+        <img src="/Users/rae/Desktop/bdayweb/assets/1.png" alt="Image 1">
+        <span class="overlay"></span>
+      </div>
+      <div class="grid-item">
+        <img src="/Users/rae/Desktop/bdayweb/assets/2.png" alt="Image 2">
+        <span class="overlay"></span>
+      </div>
+      <div class="grid-item">
+        <img src="/Users/rae/Desktop/bdayweb/assets/3.jpg" alt="Image 3">
+        <span class="overlay"></span>
+      </div>
+      <div class="grid-item">
+        <img src="/Users/rae/Desktop/bdayweb/assets/4.jpg" alt="Image 4">
+        <span class="overlay"></span>
+      </div>
+      <div class="grid-item">
+        <img src="/Users/rae/Desktop/bdayweb/assets/5.jpg" alt="Image 5">
+        <span class="overlay"></span>
+      </div>
+      <div class="grid-item">
+        <img src="/Users/rae/Desktop/bdayweb/assets/6.jpg" alt="Image 6">
+        <span class="overlay"></span>
+
+</body>
+</html>
